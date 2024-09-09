@@ -1,0 +1,200 @@
+.lift-queue {
+  overflow: auto;
+  max-width: 100%;
+  max-height: 50px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 10px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 25px;
+  height: 9vh;
+}
+
+.formInput span {
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.formInput > span > input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
+}
+
+#btnStart {
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#btnReset {
+  border: none;
+  background-color: rgb(246, 163, 163);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#btnStart:hover {
+  background-color: darkgreen;
+}
+
+.error {
+  color: red;
+  margin-left: 10px;
+}
+
+.hideError {
+  display: none;
+}
+
+.building-area {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0px 10px;
+  height: 82vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.floor {
+  display: flex;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  min-height: 100px;
+  height: 100px;
+}
+
+.floor-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 10%;
+}
+
+.floor-label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.lift-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+  gap: 2px;
+}
+
+.lift-buttons button {
+  cursor: pointer;
+}
+
+.floor-lift-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+
+.lift {
+  border: 1px solid black;
+  flex: 1;
+  max-width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.lift-doors {
+  height: 100%;
+  width: 100%;
+  background-color: darkgoldenrod;
+  transition: transform 2.5s ease-in-out;
+}
+
+.lift-left-door {
+  border: 1px solid black;
+  padding: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lift-right-door {
+  border: 1px solid black;
+  padding: 5px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .formInput {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .formInput > span {
+    margin: 5px 0;
+  }
+
+  .floor {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .floor-info-section {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .lift-buttons {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .floor-lift-section {
+    width: 100%;
+    height: 80px;
+    overflow-x: auto;
+  }
+
+  .lift {
+    width: 60px;
+    position: relative;
+    flex-shrink: 0;
+  }
+}
