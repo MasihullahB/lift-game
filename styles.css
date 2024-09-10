@@ -171,30 +171,46 @@
   }
 
   .floor {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
   }
 
   .floor-info-section {
-    width: 100%;
-    flex-direction: row;
+    width: 10%;
+    flex-direction: column;
     justify-content: space-between;
   }
 
+  .floor-label {
+    font-size: 10px;
+  }
+
   .lift-buttons {
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
   }
 
   .floor-lift-section {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
     height: 80px;
-    overflow-x: auto;
+    /* overflow-x: auto; */
+    position: relative;
   }
 
   .lift {
+    margin-left: 15px;
     width: 60px;
-    position: relative;
-    flex-shrink: 0;
+    height: 80px;
+    transition: transform 2s linear;
+  }
+
+  .lift-left-door,
+  .lift-right-door {
+    width: 50%;
+    padding: 5px;
   }
 }
