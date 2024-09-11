@@ -1,3 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
+  background-color: #f9f9f9; /* Optional: Add a background color for contrast */
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .lift-queue {
   overflow: auto;
   max-width: 100%;
@@ -76,6 +97,7 @@
   border-radius: 5px;
   margin: 0px 10px;
   height: 82vh;
+  width: 90vw;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -114,6 +136,7 @@
 
 .lift-buttons button {
   cursor: pointer;
+  font-size: 0.5rem;
 }
 
 .floor-lift-section {
@@ -160,6 +183,11 @@
   align-items: center;
 }
 
+.hideOnLoad,
+.hideOnStart {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .formInput {
     flex-direction: column;
@@ -188,6 +216,11 @@
   .lift-buttons {
     flex-direction: column;
     width: 100%;
+  }
+
+  .lift-buttons button {
+    cursor: pointer;
+    font-size: 1rem;
   }
 
   .floor-lift-section {

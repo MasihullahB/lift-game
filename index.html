@@ -9,27 +9,41 @@
   </head>
   <body>
     <div class="main" role="main">
-      <h1 id="lift-game" class="title">Lift Game</h1>
+      <header class="header">
+        <h1 id="lift-game" class="title">Lift Game</h1>
+        <button id="btnReset">Reset</button>
+      </header>
 
       <div class="formInput">
         <span class="floorSection">
           <label for="floors">Enter no. of floors:</label>
-          <input type="number" id="floors" min="1" max="100" />
+          <input
+            class="numberInput"
+            type="number"
+            id="floors"
+            min="1"
+            max="100"
+          />
         </span>
         <span class="liftSection">
           <label for="lifts">Enter no. of lifts:</label>
-          <input type="number" id="lifts" min="1" max="10" />
+          <input
+            class="numberInput"
+            type="number"
+            id="lifts"
+            min="1"
+            max="10"
+          />
         </span>
         <button id="btnStart">Start</button>
-        <button id="btnReset">Reset</button>
         <div class="error hideError">
           <span id="errorMsg"></span>
         </div>
       </div>
 
-      <div class="lift-queue"></div>
+      <div class="hideOnLoad lift-queue"></div>
 
-      <div class="building-area"></div>
+      <div class="hideOnLoad building-area"></div>
     </div>
     <script src="script.js" defer></script>
   </body>
