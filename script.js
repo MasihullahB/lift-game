@@ -24,7 +24,6 @@ const liftQueueArea = document.querySelector(".lift-queue");
 btnStart.addEventListener("click", startGame);
 btnReset.addEventListener("click", restartGame);
 
-// check if value is a number, if not, discard pressed key
 document.querySelectorAll(".numberInput").forEach((input) => {
   input.addEventListener("input", (event) => {
     const value = event.target.value;
@@ -85,6 +84,10 @@ function validateForm() {
   else if (floorCount === 1 && liftCount > 0) {
     validationResult.isValid = false;
     validationResult.errorMessage = "No lift required for 1 floor.";
+  } else if (floorCount > 100 || liftCount > 100) {
+    validationResult.isValid = false;
+    validationResult.errorMessage =
+      "Lift or Floor values cannot be more than 100";
   }
 
   return validationResult;

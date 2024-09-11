@@ -141,7 +141,7 @@
 
 .floor-lift-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   width: 90%;
   height: 100%;
@@ -150,7 +150,7 @@
 .lift {
   border: 1px solid black;
   flex: 1;
-  max-width: 100px;
+  min-width: 100px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -226,7 +226,7 @@
   .floor-lift-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     width: 90%;
     height: 80px;
@@ -236,7 +236,7 @@
 
   .lift {
     margin-left: 15px;
-    width: 60px;
+    min-width: 60px;
     height: 80px;
     transition: transform 2s linear;
   }
