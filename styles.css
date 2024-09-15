@@ -157,6 +157,7 @@
   margin: 0 5px;
   position: relative;
   overflow: hidden;
+  background-color: lightgray;
 }
 
 .lift-doors {
