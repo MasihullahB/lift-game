@@ -149,13 +149,14 @@
 
 .lift {
   border: 1px solid black;
-  flex: 1;
   min-width: 100px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 5px;
+  position: relative;
+  overflow: hidden;
 }
 
 .lift-doors {
@@ -163,6 +164,7 @@
   width: 100%;
   background-color: darkgoldenrod;
   transition: transform 2.5s ease-in-out;
+  position: absolute;
 }
 
 .lift-left-door {
@@ -172,6 +174,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 0;
 }
 
 .lift-right-door {
@@ -181,6 +184,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  right: 0;
 }
 
 .hideOnLoad,
@@ -239,11 +243,22 @@
     min-width: 60px;
     height: 80px;
     transition: transform 2s linear;
+    position: relative;
+    overflow: hidden;
   }
 
   .lift-left-door,
   .lift-right-door {
     width: 50%;
     padding: 5px;
+    position: absolute;
+  }
+
+  .lift-left-door {
+    left: 0;
+  }
+
+  .lift-right-door {
+    right: 0;
   }
 }
